@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="container">
+    <form id="dataForm">
+        <label for="phone">Số Điện Thoại:</label>
+        <input type="text" id="phone" name="phone" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="province">Tỉnh / Thành Phố:</label>
+        <select id="province" name="province" onchange="populateDistricts()" required>
+            <option value="" disabled selected>Chọn Tỉnh / Thành Phố</option>
+        </select><br>
+
+        <label for="district">Quận / Huyện:</label>
+        <select id="district" name="district" required>
+            <option value="" disabled selected>Chọn Quận / Huyện</option>
+        </select><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="displayData">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
